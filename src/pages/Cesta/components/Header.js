@@ -6,11 +6,11 @@ import HeaderImage from "../../../../assets/topo.png";
 
 const widthScreen = Dimensions.get("screen").width;
 
-export function Header() {
+export function Header({ title }) {
   return (
     <>
       <Image source={HeaderImage} style={styles.header} />
-      <CostumText style={styles.title}>Detalhe da cesta</CostumText>
+      <CostumText style={styles.title}>{title}</CostumText>
     </>
   );
 }

@@ -2,21 +2,16 @@ import React from "react";
 import { Image, StyleSheet, View } from "react-native";
 import { CostumText } from "../../../components/CostumText";
 
-import LogoImagem from "../../../../assets/logo.png";
-
-export function Details() {
+export function Details({ title, logoSrc, nameFarm, description, price }) {
   return (
     <>
-      <CostumText style={styles.detaislTitle}>Cesta de Verduras</CostumText>
+      <CostumText style={styles.detaislTitle}>{title}</CostumText>
       <View style={styles.detailsFarmContainer}>
-        <Image source={LogoImagem} style={styles.logoFarm} />
-        <CostumText style={styles.detailsNameFarm}>Jenny Jack Farm</CostumText>
+        <Image source={logoSrc} style={styles.logoFarm} />
+        <CostumText style={styles.detailsNameFarm}>{nameFarm}</CostumText>
       </View>
-      <CostumText style={styles.detailsDescription}>
-        Uma cesta com produtos selecionados cuidadosamente da fazenda direto
-        para a cozinha.
-      </CostumText>
-      <CostumText style={styles.detailsPrice}>R$ 40,00</CostumText>
+      <CostumText style={styles.detailsDescription}>{description}</CostumText>
+      <CostumText style={styles.detailsPrice}>{price}</CostumText>
     </>
   );
 }
