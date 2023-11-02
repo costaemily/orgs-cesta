@@ -6,19 +6,29 @@ import {
   Montserrat_700Bold,
 } from "@expo-google-fonts/montserrat";
 import { cestaMock } from "./src/mocks/cesta";
+import * as SplashScreen from "expo-splash-screen";
+import { useCallback } from "react";
+
+SplashScreen.preventAutoHideAsync();
 
 export default function App() {
-  const [fontLoaded] = useFonts({
+  const [fontsLoaded, fontsError] = useFonts({
     MontSerratRegular: Montserrat_400Regular,
     MontSerratBold: Montserrat_700Bold,
   });
 
-  if (!fontLoaded) {
-    return <View />;
+  const onLayoutRootView = useCallback(async () => {
+    if (fontsLoaded || fontsError) {
+      await SplashScreen.hideAsync();
+    }
+  }, [fontsLoaded, fontsError]);
+
+  if (!fontsLoaded && !fontsError) {
+    return null;
   }
 
   return (
-    <SafeAreaView>
+    <SafeAreaView onLayout={onLayoutRootView}>
       <StatusBar />
       <Cesta {...cestaMock} />
     </SafeAreaView>
