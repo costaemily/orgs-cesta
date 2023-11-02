@@ -9,12 +9,12 @@ import { StyleSheet, View } from "react-native";
   return <Text>Cesta</Text>
 } */
 
-export const Cesta = () => {
+export const Cesta = ({ header, details }) => {
   return (
     <>
-      <Header />
+      <Header {...header} />
       <View style={styles.details}>
-        <Details />
+        <Details {...details} />
       </View>
     </>
   );
