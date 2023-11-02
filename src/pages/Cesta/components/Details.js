@@ -1,8 +1,8 @@
 import React from "react";
-import { Image, StyleSheet, View } from "react-native";
+import { TouchableOpacity, Image, StyleSheet, View } from "react-native";
 import { CostumText } from "../../../components/CostumText";
 
-export function Details({ title, logoSrc, nameFarm, description, price }) {
+export function Details({ title, logoSrc, nameFarm, description, price, buy }) {
   return (
     <>
       <CostumText style={styles.detaislTitle}>{title}</CostumText>
@@ -12,6 +12,9 @@ export function Details({ title, logoSrc, nameFarm, description, price }) {
       </View>
       <CostumText style={styles.detailsDescription}>{description}</CostumText>
       <CostumText style={styles.detailsPrice}>{price}</CostumText>
+      <TouchableOpacity style={styles.buttonContainer} onPress={() => null}>
+        <CostumText style={styles.buttonText}>{buy}</CostumText>
+      </TouchableOpacity>
     </>
   );
 }
@@ -52,5 +55,17 @@ const styles = StyleSheet.create({
     fontSize: 26,
     lineHeight: 42,
     marginTop: 8,
+  },
+  buttonContainer: {
+    paddingVertical: 16,
+    backgroundColor: "#2A9F85",
+    borderRadius: 6,
+  },
+  buttonText: {
+    textAlign: "center",
+    color: "#fff",
+    fontSize: 16,
+    lineHeight: 26,
+    fontWeight: "bold",
   },
 });
