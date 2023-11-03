@@ -37,6 +37,10 @@ export const cestaMock = {
         name: "Pepino",
         image: pepino,
       },
+      {
+        name: "Abóbora",
+        image: abobora,
+      },
     ],
   },
 };
