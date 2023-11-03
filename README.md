@@ -18,4 +18,4 @@ Here is a picture of the page created:
 
 <img width="300px" src="https://github.com/costaemily/orgs-cesta/assets/80849729/ecd507bd-8005-4cc1-99c6-e52f160b2404"/>
 
-OBS: It is very important to say that this project was made following Alura`s course instructions.
+OBS: It is very important to say that this project was made by following Alura`s course instructions.
