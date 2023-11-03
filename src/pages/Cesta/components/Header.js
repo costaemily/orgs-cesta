@@ -1,6 +1,6 @@
 import React from "react";
 import { Dimensions, Image, StyleSheet } from "react-native";
-import { CostumText } from "../../../components/CostumText";
+import { StyledText } from "../../../components/StyledText";
 
 import HeaderImage from "../../../../assets/topo.png";
 
@@ -10,7 +10,7 @@ export function Header({ title }) {
   return (
     <>
       <Image source={HeaderImage} style={styles.header} />
-      <CostumText style={styles.title}>{title}</CostumText>
+      <StyledText style={styles.title}>{title}</StyledText>
     </>
   );
 }

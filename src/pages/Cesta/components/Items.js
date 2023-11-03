@@ -1,16 +1,16 @@
 import React from "react";
-import { CostumText } from "../../../components/CostumText";
+import { StyledText } from "../../../components/StyledText";
 import { Image, StyleSheet, View } from "react-native";
 
 export function Items({ title, list }) {
   return (
     <>
-      <CostumText style={styles.title}>{title}</CostumText>
+      <StyledText style={styles.title}>{title}</StyledText>
       {list.map(({ name, image }) => {
         return (
           <View key={name} style={styles.item}>
             <Image source={image} style={styles.imageItem} />
-            <CostumText style={styles.textItem}>{name}</CostumText>
+            <StyledText style={styles.textItem}>{name}</StyledText>
           </View>
         );
       })}
