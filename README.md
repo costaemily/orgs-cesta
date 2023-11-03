@@ -2,7 +2,7 @@
 
 This project is a simulation page of a "Cesta de Verduras" and aimed to study React Native and some of its components.
 
-In this project i had the oportunity to study the most used components of React Native, as:
+In this project I had the oportunity to study the most used components of React Native, as:
 
 - View
 - ScrollView
@@ -12,7 +12,7 @@ In this project i had the oportunity to study the most used components of React 
 - TouchableOpacity
 - Image
 
-These components mentioned above were styled using StyleSheet. Also it is important to say there are created components that is used in other components.
+These components mentioned above were styled using StyleSheet. Also it is important to say there are created components that are used in other components.
 
 Here is a picture of the page created:
 
