@@ -13,7 +13,7 @@ const styles = (boldText) =>
     },
   }); */
 
-export function CostumText({ children, style }) {
+export function StyledText({ children, style }) {
   let defaultStyle = styles.normalStyle;
 
   if (style?.fontWeight === "bold") {

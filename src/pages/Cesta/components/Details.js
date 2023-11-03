@@ -1,19 +1,19 @@
 import React from "react";
 import { TouchableOpacity, Image, StyleSheet, View } from "react-native";
-import { CostumText } from "../../../components/CostumText";
+import { StyledText } from "../../../components/StyledText";
 
 export function Details({ title, logoSrc, nameFarm, description, price, buy }) {
   return (
     <>
-      <CostumText style={styles.detaislTitle}>{title}</CostumText>
+      <StyledText style={styles.detailsTitle}>{title}</StyledText>
       <View style={styles.detailsFarmContainer}>
         <Image source={logoSrc} style={styles.logoFarm} />
-        <CostumText style={styles.detailsNameFarm}>{nameFarm}</CostumText>
+        <StyledText style={styles.detailsNameFarm}>{nameFarm}</StyledText>
       </View>
-      <CostumText style={styles.detailsDescription}>{description}</CostumText>
-      <CostumText style={styles.detailsPrice}>{price}</CostumText>
+      <StyledText style={styles.detailsDescription}>{description}</StyledText>
+      <StyledText style={styles.detailsPrice}>{price}</StyledText>
       <TouchableOpacity style={styles.buttonContainer} onPress={() => null}>
-        <CostumText style={styles.buttonText}>{buy}</CostumText>
+        <StyledText style={styles.buttonText}>{buy}</StyledText>
       </TouchableOpacity>
     </>
   );
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     paddingVertical: 8,
     paddingHorizontal: 16,
   },
-  detaislTitle: {
+  detailsTitle: {
     color: "#464646",
     fontSize: 26,
     lineHeight: 42,
