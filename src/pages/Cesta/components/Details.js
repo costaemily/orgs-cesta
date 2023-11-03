@@ -5,7 +5,7 @@ import { StyledText } from "../../../components/StyledText";
 export function Details({ title, logoSrc, nameFarm, description, price, buy }) {
   return (
     <>
-      <StyledText style={styles.detaislTitle}>{title}</StyledText>
+      <StyledText style={styles.detailsTitle}>{title}</StyledText>
       <View style={styles.detailsFarmContainer}>
         <Image source={logoSrc} style={styles.logoFarm} />
         <StyledText style={styles.detailsNameFarm}>{nameFarm}</StyledText>
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     paddingVertical: 8,
     paddingHorizontal: 16,
   },
-  detaislTitle: {
+  detailsTitle: {
     color: "#464646",
     fontSize: 26,
     lineHeight: 42,
